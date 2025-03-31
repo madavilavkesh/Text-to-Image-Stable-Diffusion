@@ -1,56 +1,71 @@
-````md
+# **Gen AI Text-to-Image Generator using Stable Diffusion**  
+
+## **Overview**  
+This is a web-based **text-to-image generator** built using **Stable Diffusion**. Users can input a text prompt, configure various parameters, and generate AI-generated images.  
+
+## **Features**  
+- **Stable Diffusion 2.1** for high-quality image generation.  
+- **Multiple Scheduler Algorithms**:  
+  - Euler Discrete  
+  - LMS Discrete  
+  - PNDM  
+  - DPM Solver Multistep  
+  - DDIM  
+- **Customizable Parameters**:  
+  - Number of inference steps  
+  - Guidance scale  
+  - Image resolution (height & width)  
+  - Seed for reproducibility  
+- **Web UI using Gradio** for easy interaction.  
+
 ---
-title: Gen AI Text-to-Image Generator
-emoji: 🎨
-colorFrom: blue
-colorTo: purple
-sdk: gradio
-sdk_version: "4.27.0"
-app_file: app.py
-pinned: false
----
 
-# Gen AI Text-to-Image Generator using Stable Diffusion
+## **Installation & Setup**  
 
-This project is a **Text-to-Image Generation Web App** built using **Stable Diffusion**, **Gradio**, and **Diffusers**.  
-It allows users to generate AI-powered images from text descriptions with various customizable parameters.
-
-## Features
-
-- **Text-to-Image Generation**: Enter a text prompt to generate AI-generated images.
-- **Negative Prompting**: Specify what elements should be avoided in the image.
-- **Multiple Scheduler Algorithms**: Supports **Euler Discrete, LMS Discrete, PNDM, DPM Solver Multistep, and DDIM**.
-- **Customizable Parameters**:
-  - **Inference Steps**: Control the number of denoising steps.
-  - **Guidance Scale**: Adjust how closely the image follows the text prompt.
-  - **Image Dimensions**: Set the height and width of the generated image.
-  - **Batch Size**: Generate multiple images at once.
-  - **Seed**: Ensure reproducibility by setting a seed value.
-- **User-Friendly Gradio UI** for easy interaction.
-
-## Installation
-
-To run this project locally, install the required dependencies:
-
-```sh
-pip install transformers diffusers torch pillow gradio
+### **1. Clone the Repository**  
+```bash
+git clone <repository_link>
+cd <repository_name>
 ```
-````
 
-## Usage
+### **2. Install Dependencies**  
+```bash
+pip install torch diffusers gradio pillow
+```
 
-Run the application using:
-
-```sh
+### **3. Run the Web App**  
+```bash
 python app.py
 ```
 
-Then, access the Gradio web interface to generate images.
+Once the server starts, open the provided **Gradio link** in your browser.  
 
-## License
+---
 
-This project is licensed under the **MIT License**.
+## **Deployment**  
 
-```
+### **Option 1: Hugging Face Spaces**  
+- The web app can be deployed on **Hugging Face Spaces** for free.  
+- **Limitation**: Runs on **CPU**, making image generation slower.  
+- **Demo Link:** [Your Hugging Face Space Link](https://huggingface.co/spaces/madavilavkesh/text2image_stable_diffusion) 
 
-```
+### **Option 2: Google Colab (Faster Processing)**  
+For faster execution, use **Google Colab** with **GPU**:  
+1. Open **Text_to_Image_generator.ipynb** in [Google Colab](https://colab.research.google.com/).  
+2. **Change runtime to GPU**:  
+   - Click **Runtime** → **Change runtime type** → **Select GPU** → **Save**.  
+3. Run all cells and generate images faster than on CPU.  
+
+---
+
+## **Usage Instructions**  
+1. Open the web app.  
+2. Enter a **text prompt** (e.g., "A futuristic city at sunset").  
+3. Adjust **settings** like image resolution, steps, and scheduler.  
+4. Click **Generate** to create an AI-generated image.  
+5. Download the generated image(s) from the gallery.  
+
+---
+
+## **License**  
+This project is open-source and can be modified for learning purposes.  
