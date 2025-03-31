@@ -1,0 +1,6 @@
+torch
+transformers
+diffusers
+gradio
+pillow
+scipy
